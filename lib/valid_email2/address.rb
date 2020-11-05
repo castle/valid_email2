@@ -127,7 +127,7 @@ module ValidEmail2
 
     def resolv_dns
       dns = Resolv::DNS.new
-      dns.timeouts = 1
+      dns.timeouts = 0.25
       return dns unless block_given?
       begin
         yield dns
